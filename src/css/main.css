@@ -88,44 +88,52 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
 body {
-
-  margin: 0;
-  padding: 0;
-  text-align:center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 16px;
 }
 
 hr {
     border: 0;
-    border-top: 1px solid #0550A5;
+    border-top: 1px solid #0550a5;
     height: 1px;
-    color: #0550A5;
-    background-color: #0550A5;
+    color: #0550a5;
+    background-color: #0550a5;
 }
 
-body, td {
-  font-family: Verdana, Geneva, Arial, helvetica, sans-serif;
-  font-size: 10pt;
+img {
+    border: none;
 }
-img {border: none;}
-h1 {font-size: 150%;}
-h2 {font-size: 130%;}
-h3 {font-size: 120%;}
-h4 {font-size: 110%;}
-h5 {font-size: 100%;}
+h1 {
+    font-size: 150%;
+}
+h2 {
+    font-size: 130%;
+}
+h3 {
+    font-size: 120%;
+}
+h4 {
+    font-size: 110%;
+}
+h5 {
+    font-size: 100%;
+}
 
 a {
-	color: #35B;
-	text-decoration: none;
+    color: #35b;
 }
 a:hover {
-	color: #B53;
+    color: #b53;
 }
 
 #page {
-    background-color: #FFF;
-    border: solid 1px #CCC;
+    background-color: #fff;
+    border: solid 1px #ccc;
     border-top: none;
     width: 900px;
     margin: 0 auto 16px auto;
@@ -136,144 +144,195 @@ a:hover {
 }
 
 #top {
-	width: 900px;
-	height: 65px;
-	background-color: #FFF;
-	border-bottom: none;
-	margin:0;
-	padding: 10px 0 0 0;
+    width: 900px;
+    height: 65px;
+    background-color: #fff;
+    border-bottom: none;
+    margin: 0;
+    padding: 10px 0 0 0;
 }
 
 #mid {
-	width: 900px;
-	border-bottom: 1px solid #CCC;
-/*	background-image: url(../img/bg.png);*/
-	margin:0;
-    padding: 0;
+    width: 900px;
+    border-bottom: 1px solid #ccc;
+    /*	background-image: url(../img/bg.png);*/
+    margin: 0;
+    padding: 1em 0 0 0;
+    display: flex;
 }
 
 #side {
-	width: 180px;
-	float: left;
-	margin:0;
-	padding: 5px 10px 5px 10px;
+    width: 180px;
+    margin: 0;
+    padding: 5px 10px 5px 10px;
 }
 
 #main {
-	width: 676px;
-	float: right;
-	margin:0;
-	padding: 7px;
-	text-align: justify;
+    width: 676px;
+    margin: 0;
+    padding: 7px;
+    text-align: justify;
 }
 
 .break {
-	clear: both;
+    clear: both;
 }
 
 #bot {
-	width: 900px;
-	border-bottom: 1px solid #777;
-	font-size: 75%;
-	text-align: center;
-	margin:0;
+    width: 900px;
+    border-bottom: 1px solid #777;
+    font-size: 75%;
+    text-align: center;
+    margin: 0;
     papping: 0;
-	color: #225;
+    color: #225;
+}
+
+#burgermenu-checkbox {
+    display: none;
+}
+label[for="burgermenu-checkbox"] {
+    display: none;
+    user-select: none;
+    background: #fff;
+    color: #0550a5;
+    text-underline-offset: 3px;
+    padding-right: 0.5em;
+    cursor: pointer;
+}
+
+label[for="burgermenu-checkbox"]:hover,
+label[for="burgermenu-checkbox"]:focus {
+    text-decoration: underline;
+}
+
+label[for="burgermenu-checkbox"] span {
+    font-size: 1.6em;
+    font-weight: bold;
 }
 
 #top h1 {
-	margin: 0;
-	padding: 0 0 0 10px;
-	color: #000000;
-	font-size: 24px;
+    display: inline-block;
+    margin: 0;
+    padding: 0 0 0 10px;
+    color: #000000;
+    font-size: 24px;
+}
+#top h1 a {
+    text-decoration: none;
+}
+#top h1 a:hover,
+#top h1 a:focus {
+    text-decoration: underline;
 }
 #top h2 {
-	margin: 0;
-	padding: 4px 0 5px 10px;
-	color: #000000;
-	font-size: 90%;
+    margin: 0;
+    padding: 4px 0 5px 10px;
+    color: #000000;
+    font-size: 90%;
 }
 
 /* Menu */
-#side a {
-	text-decoration : none;
-	color: #ffffff;
+#side li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+#side li {
+    padding: 0;
+    background-color: transparent;
+}
+
+#side li a {
+    padding: 5px 0 5px 15px;
+    display: block;
+    color: #ffffff;
+    background-color: #0550a5;
+    text-align: left;
+    border: 1px solid currentColor;
+}
+
+#side li a:hover,
+#side li a:focus {
+    display: block;
+    background-color: #0550a578;
+}
+#side li a.active {
+    color: #0550a5;
+    background-color: #ffffff;
+}
+
+button,
+.btn {
+    text-decoration: none;
+    display: inline-flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 0.5em;
+    user-select: none;
+    padding: 5px;
+    background: #ffffff82;
+    color: #0550a5;
+    border: 1px solid currentColor;
+}
+
+button:hover,
+button:focus,
+.btn:hover,
+.btn:focus {
+    background-color: #0550a5;
+    color: #fff;
+}
+button:active,
+.btn:active {
+    box-shadow: inset 0px 0px 1px 2px rgb(255 255 255), 0px 0px 1px 1px #0550a5;
+    background-color: #0550a5;
+    color: #fff;
+}
+
+button .icon,
+.btn .icon {
+    font-size: 1.2em;
+}
+button img,
+.btn img {
+    background: white;
+    border-radius: 100%;
+    padding: 1px;
 }
 
 .zul {
     padding: 13px 0 0;
     margin: 10px 0 0 0;
-	list-style: none;
-}
-.zli1,.zli2,.zli3,.zli4 {
-    background-color: #0550A5;
-    display: block;
-    text-align: left;
-    margin-top: 0.15em;
-    padding-left: 15px;
-    color: #ffffff;
-}
-.zon {
-	/*background-image: url(/web/20120921091425/http://www.risacher.com/la-rache/theme/rache/images/pge1.png);*/
-		display : block;
-	margin-top : 0.15em;
-	padding-left : 15px;
-	color : #ffffff;
-	background-color : #0550A5;
-}
-.zli1 {
-    margin-left: 0;
-}
-.zli2 {
-	margin-left: 16px;
-}
-.zli3 {
-	margin-left: 32px;
-}
-.zli4 {
-	margin-left: 48px;
+    list-style: none;
 }
 
 #zadmin {
-	border: 1px solid #CCC;
-	background-color: #EEE;
-	padding: 0 2px;
-	margin: 3px 0 0 0;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    padding: 0 2px;
+    margin: 3px 0 0 0;
 }
 .ztable {
-	border: 1px solid #CCC;
-	background-color: #EEE;
-	padding: 0 2px;
-	margin: 5px 0;
-	width: 100%;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    padding: 0 2px;
+    margin: 5px 0;
+    width: 100%;
 }
 .zalert {
-	border: 1px solid #C00;
-	background-color: #FEA;
-	padding: 0 2px;
+    border: 1px solid #c00;
+    background-color: #fea;
+    padding: 0 2px;
 }
 
-
 #side {
-  text-align: center;
+    text-align: center;
 }
 
 #side .logo_web2_0 {
-  margin-top: 28px;
+    margin-top: 28px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    Helper classes
@@ -360,9 +419,9 @@ a:hover {
 }
 
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+    (-webkit-min-device-pixel-ratio: 1.25),
+    (min-resolution: 1.25dppx),
+    (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -441,4 +500,9 @@ a:hover {
     h3 {
         page-break-after: avoid;
     }
+}
+
+navbar {
+    display: flex;
+    justify-content: space-between;
 }

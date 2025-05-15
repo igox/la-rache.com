@@ -1,0 +1,168 @@
+#certificat-wrap {
+    background: linear-gradient(45deg, #ff9900, #ffe85b);
+    padding: 0.5em;
+}
+#certificat {
+    font-family: Superclarendon, "Bookman Old Style", "URW Bookman",
+        "URW Bookman L", "Georgia Pro", Georgia, serif;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0.5em;
+    background-color: white;
+    color: #444444;
+    text-shadow: 0px 1px 0px white;
+}
+
+#certificat h1 {
+    color: #936a34;
+}
+
+.certificat-header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: white;
+    position: relative;
+}
+
+.certificat-header > div:nth-child(2) {
+    z-index: 2;
+    position: relative;
+}
+
+.certificat-footer {
+    display: grid;
+    grid-template-columns: calc(50% - 50px) 100px calc(50% - 50px);
+}
+
+.certificat-footer div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.palme {
+    background: url(../img/palme.svg) no-repeat center/ contain;
+    width: 92px;
+    height: 192px;
+    position: absolute;
+    right: -0.75em;
+}
+
+.palme:first-child {
+    transform: scaleX(-1);
+    left: -0.75em;
+    z-index: 1;
+}
+
+.badge {
+    position: relative;
+}
+
+.badge-img {
+    background: url(../img/badge.svg) no-repeat center / contain;
+    width: 100px;
+    height: 100px;
+}
+
+.badge-label {
+    top: 42px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    text-shadow: none;
+}
+
+#certificat blockquote {
+    margin-top: 0;
+    z-index: 2;
+    position: relative;
+}
+
+@media screen and (max-width: 900px) {
+    #certificat blockquote {
+        margin: 0;
+    }
+}
+
+#certificat-name {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+    text-shadow: inherit;
+    background-color: transparent;
+
+    font-family: "Segoe Print", "Bradley Hand", Chilanka, TSCu_Comic, casual,
+        cursive;
+    font-size: 2em;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+
+#certificat-name:hover,
+#certificat-name:invalid {
+    box-shadow: 0 0 0 2px currentColor;
+}
+.screenshot #certificat-name {
+    box-shadow: none;
+    outline: none;
+}
+input:-webkit-autofill {
+    transition: background-color 5000s ease-in-out 0s;
+}
+input:autofill {
+    background-clip: text;
+}
+
+.certificat-link {
+    text-align: right;
+    margin-top: 1em;
+}
+
+.certificat-link a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#certificat-actions {
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+    background: #ffffff82;
+    z-index: 3;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    padding-top: 0.5rem;
+}
+
+.screenshot {
+    animation: flash 0.3s ease-in-out 0s 1;
+}
+
+.screenshot + p button {
+    cursor: progress;
+}
+
+@keyframes flash {
+    from {
+        filter: brightness(0.5);
+        transform: scale(1);
+    }
+
+    50% {
+        filter: brightness(3);
+        transform: scale(0.95);
+    }
+
+    to {
+        filter: brightness(1);
+        transform: scale(1);
+    }
+}

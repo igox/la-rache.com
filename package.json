@@ -3,16 +3,23 @@
   "version": "0.0.0",
   "description": "Site web la-rache.com",
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-cli": "^0.1.13",
-    "grunt-contrib-copy": "^0.8.2",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-html": "^5.0.1",
+    "grunt": "^1.4.1",
+    "grunt-cache-bust": "^1.7.0",
+    "grunt-cli": "^1.4.3",
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-connect": "^4.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^5.0.0",
+    "grunt-contrib-htmlmin": "^3.1.0",
+    "grunt-contrib-uglify": "^5.2.2",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-html": "^16.0.0",
     "grunt-text-replace": "^0.4.0"
   },
   "scripts": {
-    "test": "./node_modules/grunt-cli/bin/grunt  test",
-    "build": "./node_modules/grunt-cli/bin/grunt"
+    "serve": "grunt serve",
+    "test": "grunt test",
+    "build": "grunt"
   },
   "repository": {
     "type": "git",
@@ -22,7 +29,7 @@
     "la-rache"
   ],
   "author": "Cyril Feraudet",
-  "license": "WTFPL",
+  "license": "LPRàB",
   "bugs": {
     "url": "https://github.com/la-rache/la-rache.com/issues"
   }
